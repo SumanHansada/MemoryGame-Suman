@@ -1,0 +1,326 @@
+@media (min-width: 320px) { 
+    .deck {
+        width: 264px;
+        min-height: 272px;
+        background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 0 3em;
+      }
+      
+      .deck .card {
+        height: 50px;
+        width: 50px;
+        background: #2e3d49;
+        font-size: 0;
+        color: #ffffff;
+        border-radius: 8px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+      }
+      .score-panel {
+        text-align: left;
+        width: 290px;
+        margin-bottom: 10px;
+      }
+
+}
+@media (min-width: 576px) { 
+    .deck {
+        width: 363px;
+        min-height: 374px;
+        background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+        padding: 32px;
+        border-radius: 10px;
+        box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 0 3em;
+      }
+      
+      .deck .card {
+        height: 65px;
+        width: 65px;
+        background: #2e3d49;
+        font-size: 0;
+        color: #ffffff;
+        border-radius: 8px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+      }
+      .score-panel {
+        text-align: left;
+        width: 350px;
+        margin-bottom: 10px;
+      }
+
+}
+
+@media (min-width: 768px) { 
+    .deck {
+        width: 495px;
+        min-height: 510px;
+        background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+        padding: 32px;
+        border-radius: 10px;
+        box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 0 3em;
+      }
+      
+      .deck .card {
+        height: 95px;
+        width: 95px;
+        background: #2e3d49;
+        font-size: 0;
+        color: #ffffff;
+        border-radius: 8px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+      }
+      .score-panel {
+        text-align: left;
+        width: 475px;
+        margin-bottom: 10px;
+      }
+ }
+
+@media (min-width: 992px) { 
+    .deck {
+        width: 660px;
+        min-height: 680px;
+        background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+        padding: 32px;
+        border-radius: 10px;
+        box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 0 3em;
+      }
+      
+      .deck .card {
+        height: 125px;
+        width: 125px;
+        background: #2e3d49;
+        font-size: 0;
+        color: #ffffff;
+        border-radius: 8px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+      }
+      .score-panel {
+        text-align: left;
+        width: 650px;
+        margin-bottom: 10px;
+      }
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #ffffff url("../img/geometry2.png"); /* Background pattern from Subtle Patterns */
+  font-family: "Coda", cursive;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+}
+
+/*
+ * Styles for the deck of cards
+ */
+
+.deck .card.open {
+  transition: 0.7s;
+  transform: rotateY(180deg);
+  background: #02b3e4;
+  cursor: default;
+}
+
+.deck .card.show {
+  font-size: 33px;
+}
+
+.deck .card.match {
+  cursor: default;
+  background: #02ccba;
+  font-size: 33px;
+}
+
+.deck .card.notmatch {
+  cursor: default;
+  background: #e03166;
+  font-size: 33px;
+}
+
+/*
+ * Styles for the Score Panel
+ */
+
+
+
+.score-panel .stars {
+  margin: 0;
+  padding: 0;
+  margin: 0 5px 0 0;
+  float: left;
+}
+
+.score-panel .stars li {
+  list-style: none;
+  display: inline-block;
+}
+
+.score-panel .timer {
+  margin-left: 25%;
+}
+
+.score-panel .restart {
+  float: right;
+  cursor: pointer;
+}
+
+/*
+ * Styles for the modal components
+ */
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal-wrapper {
+  width: 475px;
+  margin: 300px auto;
+  background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+  border-radius: 8px;
+}
+.modal-header {
+  color: #fff;
+  margin: 0 auto;
+}
+.modal-header h2 {
+  text-align: center;
+  margin: 0 20px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  color: white;
+  margin: 0 10px;
+  text-align: center;
+}
+
+.modal-button {
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #ffffff;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-weight: 500;
+  font-family: "Coda", cursive;
+  color: #ffffff;
+  text-align: center;
+  transition: all 0.2s;
+  background: transparent;
+}
+
+.modal-button:hover {
+  color: #000000;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+@media all and (max-width: 30em) {
+  .modal-button {
+    display: block;
+    margin: 0.4em auto;
+  }
+}
+
+.modal-row {
+  display: table; /* Allow the centering to work */
+  margin: 0 auto;
+}
+
+.modal-stars {
+  list-style: none;
+  min-width: 400px;
+  padding: 0px;
+  margin: 0px;
+}
+.modal-stars li {
+  display: inline;
+}
+
+/* The Close Button */
+.modal-close {
+  color: white;
+  float: right;
+  margin-right: 10px;
+  font-size: 30px;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
