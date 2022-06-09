@@ -11,7 +11,7 @@ This is the project for Udacity Nanodegree - Memory Game
 1. Download or clone the zip file
 2. Extract the .zip file
 3. Open index.html in your browser
-4. Game can be played live on - [Live Game](https://sumansjs.github.io/MemoryGame-Suman/)
+4. Game can be played live on - [Live Game](https://sumanhansada.github.io/MemoryGame-Suman/)
 
 ## Rules and Regulations :-
 
